@@ -12,11 +12,11 @@ This is the end goal. Once the main end goal has been reached, I add stretch goa
 ---
 
 ## This week’s app is: :sparkles: a gate game in unity :sparkles:
-The base goal is to create a gate game in unity.
-A gate game is where a player runs through a level, and 
-passes through gates which increase or decrease the score. 
-sometimes the scores can be players and a fight may take place at the end,
-of the level.
+The base goal is to create a gate game in unity.  
+A gate game is where a player runs through a level, and   
+passes through gates which increase or decrease the score.   
+sometimes the scores can be players and a fight may take place at the end,  
+of the level.  
 **Stretch goals will be added here:**  
 
 ---
