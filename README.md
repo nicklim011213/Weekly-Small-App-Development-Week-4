@@ -26,7 +26,7 @@ of the level.
 | **Day**       | **Progress**                                                   |
 |---------------|----------------------------------------------------------------|
 | **Monday:**   | Create basic scene level track and movement script             |
-| **Tuesday:**  |                                                                |
+| **Tuesday:**  | Set up gate scripts and prefabs as well as a "clone handler"   |
 | **Wednesday:**|                                                                |
 | **Thursday:** |                                                                |
 | **Friday:**   |                                                                |
