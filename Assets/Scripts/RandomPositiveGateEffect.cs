@@ -10,6 +10,7 @@ public class RandomPositiveGateEffect : MonoBehaviour
     public int ModiferStrength;
     public TextMeshPro textbox;
     public char symbol = 'E';
+    bool Activated = false;
     void Start()
     {
         textbox = GetComponentInChildren<TextMeshPro>();
@@ -47,7 +48,7 @@ public class RandomPositiveGateEffect : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !Activated)
         {
             if (ModiferEffect == 'm')
             {
@@ -57,6 +58,7 @@ public class RandomPositiveGateEffect : MonoBehaviour
             {
                 other.gameObject.GetComponent<CloneHandler>().AddClones(ModiferStrength);
             }
+            Activated = true;
         }
     }
 }

@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class RandomNegativeGateEffecr : MonoBehaviour
+public class RandomNegativeGateEffect : MonoBehaviour
 {
     // Start is called before the first frame update
     public char ModiferEffect;
     public int ModiferStrength;
     public TextMeshPro textbox;
     public char symbol = 'E';
+    bool Activated = false;
     void Start()
     {
         textbox = GetComponentInChildren<TextMeshPro>();
@@ -47,7 +48,7 @@ public class RandomNegativeGateEffecr : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && !Activated)
         {
             if (ModiferEffect == 'd')
             {
@@ -57,6 +58,7 @@ public class RandomNegativeGateEffecr : MonoBehaviour
             {
                 other.gameObject.GetComponent<CloneHandler>().SubtractClones(ModiferStrength);
             }
+            Activated = true;
         }
     }
 }
