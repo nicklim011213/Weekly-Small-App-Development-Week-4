@@ -16,9 +16,9 @@ public class CloneHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (clones != this.transform.childCount - nonclonechildren)
+        if ((clones - 1) != this.transform.childCount - nonclonechildren)
         {
-            int childrenneeded = clones - (this.transform.childCount - nonclonechildren);
+            int childrenneeded = (clones - 1) - (this.transform.childCount - nonclonechildren);
             if (childrenneeded > 0)
             {
                 for (int i = childrenneeded; i > 0; --i)
@@ -30,9 +30,14 @@ public class CloneHandler : MonoBehaviour
                     child.transform.localPosition += new Vector3(Random.Range(-5, 5), 0, Random.Range(-5, 5));
                 }
             }
-            else
+            else if (childrenneeded < 0)
             {
-
+            
+                for (int j = this.transform.childCount; j != (clones - 1) + nonclonechildren; --j)
+                {
+                    GameObject.Destroy(this.gameObject.transform.GetChild(j - 1).gameObject);
+                }
+            
             }
         }
     }
@@ -44,7 +49,7 @@ public class CloneHandler : MonoBehaviour
 
     public void DivideClones(int amount)
     {
-        clones = Mathf.RoundToInt(clones / amount);
+        clones = Mathf.Max(Mathf.RoundToInt(clones / amount), 1);
     }
 
     public void MultiplyClones(int amount)

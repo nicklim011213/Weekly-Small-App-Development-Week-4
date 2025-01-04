@@ -14,17 +14,10 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            body.AddForce(body.transform.forward * speed * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.A))
+        body.AddForce(body.transform.forward * speed * Time.deltaTime);
+        if (Input.GetKey(KeyCode.A))
         {
             body.AddForce(-body.transform.right * speed * Time.deltaTime);
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            body.AddForce(-body.transform.forward * speed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.D))
         {

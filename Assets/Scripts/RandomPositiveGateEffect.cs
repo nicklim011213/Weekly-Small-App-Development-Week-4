@@ -19,7 +19,7 @@ public class RandomPositiveGateEffect : MonoBehaviour
         {
             case 0:
                 {
-                    // Divide
+                    // Addition
                     ModiferEffect = 'a';
                     _ = Random.Range(3, 25);
                     ModiferStrength = _;
@@ -28,7 +28,7 @@ public class RandomPositiveGateEffect : MonoBehaviour
                 }
             case 1:
                 {
-                    // Subtract
+                    // Multiply
                     ModiferEffect = 'm';
                     _ = Random.Range(2, 5);
                     ModiferStrength = _;
