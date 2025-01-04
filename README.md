@@ -27,8 +27,8 @@ of the level.
 |---------------|----------------------------------------------------------------|
 | **Monday:**   | Create basic scene level track and movement script             |
 | **Tuesday:**  | Set up gate scripts and prefabs as well as a "clone handler"   |
-| **Wednesday:**|  Finish clones and gate code, animations, models, Qol, etc next|
+| **Wednesday:**| Finish clones and gate code, animations, models, Qol, etc next |
 | **Thursday:** | Import models, squash a few bugs, thanks Blink art for model   |
-| **Friday:**   |                                                                |
+| **Friday:**   | Finish clone handler (forgot subtract whoops) edit level       |
 | **Saturday:** |                                                                |
 | **Sunday:**   |                                                                |
